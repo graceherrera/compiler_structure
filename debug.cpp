@@ -19,7 +19,8 @@ int main(){
           for(int k = 6; k >= 0; k--){cout << bitset1[k];}
           cout << line << endl;
         }
-        else if(bitset1[7] == 1 && bitset1[6] == 1 && bitset1[5] == 1){}
+        else if(bitset1[7] == 1 && bitset1[6] == 1 && bitset1[5] == 1){
+          cout << line <<" feed the stripped bitsets to an array" << endl;}
         //cout << line << " " << bitset1[7] << endl;
         //cout << line << " " << bitset1 << endl;
         //cout << line << " " << bitset1[7] << endl;
