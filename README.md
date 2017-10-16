@@ -1,3 +1,5 @@
 # compiler_structure
-I will create branches for each assignment
-debug_1.cpp is the working program. 
+Right now each node is specific for each structure and it lists their individual children
+The goal is to create a vector of children so that the ast is easier to follow. 
+
+
