@@ -7,6 +7,8 @@
 %token NUMBER
 %token ADD SUB MUL DIV ABS
 %token EOL
+%token OP CP
+
 %%
 
 calclist: /*nothing */
@@ -25,6 +27,7 @@ factor: term
 
 term: NUMBER
   | ABS term  { $$ = $2 >= 0? $2 : - $2; }
+  | OP exp CP { $$ = $2; }
   ;
 
 %%

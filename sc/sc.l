@@ -14,5 +14,8 @@
 \n        { return EOL; }
 [ \t]     { /*ignore white space*/ }
 .         { printf("Mystery character %c\n", *yytext); }
+"("       { return OP; }
+")"       { return CP; }
+"//".*    
 
 %%
