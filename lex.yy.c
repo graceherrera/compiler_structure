@@ -470,18 +470,8 @@ char *yytext;
 #line 1 "calc_scanner.l"
 /*recognize tokens for the calculator and print them out*/
 #line 4 "calc_scanner.l"
-  enum yytokentype{
-    NUMBER = 258,
-    ADD = 259,
-    SUB = 260,
-    MUL = 261,
-    DIV = 262,
-    ABS = 263,
-    EOL = 264
-  };
-
-  int yylval;
-#line 485 "lex.yy.c"
+#include <simplest_calc.tab.h>
+#line 475 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -699,9 +689,9 @@ YY_DECL
 		}
 
 	{
-#line 17 "calc_scanner.l"
+#line 7 "calc_scanner.l"
 
-#line 705 "lex.yy.c"
+#line 695 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -760,56 +750,56 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 18 "calc_scanner.l"
+#line 8 "calc_scanner.l"
 { return ADD; }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 19 "calc_scanner.l"
+#line 9 "calc_scanner.l"
 { return SUB; }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 20 "calc_scanner.l"
+#line 10 "calc_scanner.l"
 { return MUL; }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 21 "calc_scanner.l"
+#line 11 "calc_scanner.l"
 { return DIV; }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 22 "calc_scanner.l"
+#line 12 "calc_scanner.l"
 { return ABS; }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 23 "calc_scanner.l"
+#line 13 "calc_scanner.l"
 { yylval = atoi(yytext); return NUMBER; }
 	YY_BREAK
 case 7:
 /* rule 7 can match eol */
 YY_RULE_SETUP
-#line 24 "calc_scanner.l"
+#line 14 "calc_scanner.l"
 { return EOL; }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 25 "calc_scanner.l"
+#line 15 "calc_scanner.l"
 { /*ignore white space*/ }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 26 "calc_scanner.l"
+#line 16 "calc_scanner.l"
 { printf("Mystery character %c\n", *yytext); }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 28 "calc_scanner.l"
+#line 18 "calc_scanner.l"
 ECHO;
 	YY_BREAK
-#line 813 "lex.yy.c"
+#line 803 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1810,18 +1800,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 28 "calc_scanner.l"
+#line 18 "calc_scanner.l"
 
 
-
-main(int argc, char **argv)
-{
-  int tok;
-
-  while(tok = yylex()){
-    printf("%d", tok);
-    if(tok == NUMBER) printf(" = %d\n", yylval);
-    else printf("\n");
-  }
-}
 
