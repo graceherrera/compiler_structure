@@ -1214,13 +1214,13 @@ yyreduce:
 
   case 5:
 #line 19 "sc.y" /* yacc.c:1646  */
-    { (yyval) = (yyvsp[-2]) + (yyvsp[0]); }
+    { (yyval)  }
 #line 1219 "sc.tab.c" /* yacc.c:1646  */
     break;
 
   case 6:
 #line 20 "sc.y" /* yacc.c:1646  */
-    { (yyval) = (yyvsp[-2]) - (yyvsp[0]); }
+    { (yyval)  }
 #line 1225 "sc.tab.c" /* yacc.c:1646  */
     break;
 
