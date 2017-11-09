@@ -20,8 +20,10 @@ struct numval {
 struct ast *newast(int nodetype, struct ast *l, struct ast *r);
 struct ast *newnum(double d);
 
-/*evaluate an AST */
+/*evaluate an AST
+walks an ast and returns the value of the expression it represents*/
 double eval(struct ast *);
 
-/* delete and free an AST */
+/* delete and free an AST
+walks an ast and deletes all of its nodes*/
 void treefree(struct ast *);
