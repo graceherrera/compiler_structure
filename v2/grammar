@@ -1,0 +1,16 @@
+
+prompt -> exp '\n'
+       |  prompt exp '\n'.
+
+exp -> exp '+' exp
+    |  exp '*' exp
+    |  ident
+    |  number
+    |  ident '='exp.
+
+ident -> 'A'|..|'Z'.
+
+number -> digit
+       | number digit.
+
+digit -> '0'|..|'9'.
