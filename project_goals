@@ -1,0 +1,6 @@
+Create a database for sound for individual characters
+Create a grammar for correct sentence and word structure of characters
+ABSTRACT SYNTAX TREE
+Take in a subset of compound characters and break them up into indiv characters
+Create a more complex grammar tree to take into consideration honorifics
+Create a scraper for korean webpages that will use the compiler
