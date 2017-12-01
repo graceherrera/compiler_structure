@@ -2,7 +2,7 @@
 /* Korean Unicode character list */
 
 %{
-/* Headers for c code*/
+#include <stdio.h>
 %}
 /* definitions */
 
@@ -27,6 +27,6 @@
 %%
 
 main()
-    {
-    yylex();
-    }
+{
+yylex();
+}

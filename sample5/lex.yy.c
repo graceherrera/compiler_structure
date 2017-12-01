@@ -494,10 +494,11 @@ int yy_flex_debug = 0;
 char *yytext;
 #line 1 "sample5.lex"
 /* http://memory.loc.gov/diglib/codetables/9.3.html */
-#line 4 "sample5.lex"
-/* Headers for c code*/
+/* Korean Unicode character list */
+#line 5 "sample5.lex"
+#include <stdio.h>
 /* definitions */
-#line 501 "lex.yy.c"
+#line 502 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -715,10 +716,10 @@ YY_DECL
 		}
 
 	{
-#line 8 "sample5.lex"
+#line 9 "sample5.lex"
 
 
-#line 722 "lex.yy.c"
+#line 723 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -777,56 +778,56 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 10 "sample5.lex"
+#line 11 "sample5.lex"
 printf(" You've entered a Korean consonant: %s\n", yytext );
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 11 "sample5.lex"
+#line 12 "sample5.lex"
 printf(" You've entered a Korean consonant: %s\n", yytext );
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 12 "sample5.lex"
+#line 13 "sample5.lex"
 printf(" You've entered a Korean consonant: %s\n", yytext );
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 14 "sample5.lex"
+#line 15 "sample5.lex"
 printf(" The Korean consonant %s has the sound k/g\n", yytext );
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 16 "sample5.lex"
+#line 17 "sample5.lex"
 printf(" You've entered a Korean vowel: %s\n", yytext );
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 17 "sample5.lex"
+#line 18 "sample5.lex"
 printf(" You've entered a Korean vowel: %s\n", yytext );
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 20 "sample5.lex"
+#line 21 "sample5.lex"
 /* eat up one-line comments */
 	YY_BREAK
 case 8:
 /* rule 8 can match eol */
 YY_RULE_SETUP
-#line 22 "sample5.lex"
+#line 23 "sample5.lex"
 /* eat up whitespace */
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 24 "sample5.lex"
+#line 25 "sample5.lex"
 printf( "Unrecognized character: %s\n", yytext );
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 26 "sample5.lex"
+#line 27 "sample5.lex"
 ECHO;
 	YY_BREAK
-#line 830 "lex.yy.c"
+#line 831 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1827,12 +1828,16 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 26 "sample5.lex"
+#line 27 "sample5.lex"
 
 
 
 main()
-    {
+{
+  char x[3];
+  fgets(x, 3, stdin);
+  while(x != '!'){
     yylex();
-    }
+  }
+}
 

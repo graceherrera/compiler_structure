@@ -1,0 +1,19 @@
+
+vowel ["ㅏ"|"ㅐ"|"ㅑ"|"ㅓ"|"ㅔ"|"ㅕ"|"ㅗ"|"ㅘ"|"ㅛ"|"ㅜ"|"ㅠ"|"ㅡ"|"ㅢ"|"ㅣ"]
+found ['\u3148']
+
+%{
+  int v;
+  int f;
+  int count;
+%}
+%%
+{vowel}*      count++;
+{found}*      f++;
+%%
+int main(void){
+  yylex();
+  printf("number of vowels = %d\n", v++);
+  printf("number found = %d\n", f++);
+  return 0;
+}
