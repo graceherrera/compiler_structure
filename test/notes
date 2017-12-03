@@ -17,3 +17,12 @@ int main(void){
   printf("number found = %d\n", f++);
   return 0;
 }
+
+%{
+  #include <stdio.h>
+%}
+
+%%
+begin printf("Started\n");
+end   printf("Finished\n");
+%%
