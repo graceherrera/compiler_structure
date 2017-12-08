@@ -1,0 +1,6 @@
+// struct KoreanTypeCompound {
+//   std::string compound;
+//   typedef std::vector < std::shared_ptr < KoreanType > > SinglesType;
+//   SinglesType singleChars;
+//   KoreanTypeCompound(const std::string _compound, const SinglesType & _singleChars ) : compound(_compound), singles(_singleChars) {}
+// };
