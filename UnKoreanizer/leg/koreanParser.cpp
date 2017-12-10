@@ -177,7 +177,6 @@ TOKEN_JAMO = ([\x3131-ㆎ]+) {}
 TOKEN = ( [\x3131-ㆎ]+ | [ㅏ-ㅣ]+ | [a-z\-|~]+) {}
 SP = [ ]
 EOL = [\n]
-EOF = !. {}
 %%
 
 void startParser() {
